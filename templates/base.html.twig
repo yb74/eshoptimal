@@ -34,14 +34,17 @@
 {% block body %}
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="#">Eshoptimal</a>
+            <a class="navbar-brand" href="/">Eshoptimal</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href='/'>Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href='/register'>Register <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
                 <form class="form-inline mt-2 mt-md-0">
@@ -53,8 +56,8 @@
     </header>
 
     <main role="main">
-
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        {% if block('carousel') is defined %}
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -101,13 +104,13 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-
+        {% endif %}
 
         <!-- Marketing messaging and featurettes
         ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
 
-        <div class="container marketing">
+        <div class="container marketing {% if block('carousel') is not defined %} mt-5 {% endif %}">
             {% block content %} {% endblock %}
         </div><!-- /.container -->
 
