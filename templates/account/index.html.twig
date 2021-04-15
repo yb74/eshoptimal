@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My Account - Eshoptimal{% endblock %}
+
+{% block content %}
+    <h1>My account</h1>
+    Welcome into your account {{ app.user.firstname }}. <br/>
+    Here you will be able to manage your personal information.
+    <hr/>
+    <a href="{{ path('account_password') }}">Modify my password</a><br />
+    <hr/>
+{% endblock %}
