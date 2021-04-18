@@ -152,7 +152,7 @@ class Address
 
     public function setZipcode(string $zipcode): self
     {
-        $this->zip_code = $zipcode;
+        $this->zipcode = $zipcode;
 
         return $this;
     }
