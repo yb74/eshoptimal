@@ -58,7 +58,10 @@ class RegisterType extends AbstractType
                 ]
             ])
             ->add('submit', SubmitType::class, [
-                'label' => "Send"
+                'label' => "Register",
+                'attr' => [
+                    'class' => "btn btn-info btn-block"
+                ]
             ])
         ;
     }

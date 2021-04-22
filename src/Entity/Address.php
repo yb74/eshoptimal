@@ -68,6 +68,11 @@ class Address
      */
     private $phone;
 
+    public function __toString()
+    {
+        return $this->getName() . "[br]" . $this->getAddress() . "[br]" . $this->getCity() . " - " . $this->getCountry();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -152,7 +157,7 @@ class Address
 
     public function setZipcode(string $zipcode): self
     {
-        $this->zip_code = $zipcode;
+        $this->zipcode = $zipcode;
 
         return $this;
     }

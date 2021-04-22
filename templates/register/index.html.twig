@@ -3,11 +3,13 @@
 {% block title %}Register{% endblock %}
 
 {% block content %}
-    <h1>Sign Up</h1>
+    <div class="block-small">
+        <h1>Sign Up</h1>
 
-    {{ form_start(registerForm) }}
+        {{ form_start(registerForm) }}
         {{ form_widget(registerForm) }}
-    {{ form_end(registerForm) }}
+        {{ form_end(registerForm) }}
 
-    <p class="pt-2">Already have an account ? <a href="/login">Log In</a></p>
+        <p class="pt-2">Already have an account ? <a href="/login">Log In</a></p>
+    </div>
 {% endblock %}
