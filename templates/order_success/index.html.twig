@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Order confirmation - Eshoptimal{% endblock %}
+
+{% block content %}
+    <h2>Order confirmation</h2>
+    <p>
+        Hello <strong> {{ order.user.firstname }} {{ order.user.lastname }} </strong> ! <br /><br />
+        We thank you a lot for your order <strong> n° {{ order.reference }} </strong> <br />
+        A confirmation just has been sent to you to the following email address : <strong> {{ order.user.email }} </strong>
+        <hr>
+        Your order will be delivered by <strong> {{ order.carriername }} </strong> to the following address : <br /><br/>
+        {{ order.delivery|raw }}
+        <hr>
+        Go to your <a href="{{ path('account_order') }}">Account</a> to track your order
+    </p>
+{% endblock %}

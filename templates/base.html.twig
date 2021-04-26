@@ -12,7 +12,8 @@
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{{ asset('assets/css/eshoptimal.css') }}" rel="stylesheet">
-
+    {% block javascript %}
+    {% endblock %}
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -142,4 +143,7 @@
     <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
 {% endblock %}
 </body>
+{% block script %}
+
+{% endblock %}
 </html>

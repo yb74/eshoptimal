@@ -6,6 +6,11 @@
     <div class="block-small">
         <h1>Sign Up</h1>
 
+        {% if notification %}
+            <div class="alert alert-info">{{ notification }}</div>
+            <hr />
+        {% endif %}
+
         {{ form_start(registerForm) }}
         {{ form_widget(registerForm) }}
         {{ form_end(registerForm) }}
