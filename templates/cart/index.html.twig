@@ -5,6 +5,9 @@
 {% block content %}
     <h1>My Cart</h1>
     Products you have added to your cart
+    <div class="text-right py-3">
+        <a href="{{ path('product') }}" class="btn btn-success">Add other products</a>
+    </div>
     <hr/>
 
     {% if cart|length > 0 %}

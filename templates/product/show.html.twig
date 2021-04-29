@@ -19,4 +19,14 @@
             <a href="{{ path('add_to_cart', {'id' : product.id}) }}" class="btn btn-primary">Add to the cart</a>
         </div>
     </div>
+    <hr />
+    <h3>Our best sellers</h3>
+    <p>Discover the best sold products</p>
+    <div class="row">
+        {% for product in products %}
+            <div class="col-md-3">
+                {% include 'product/single_product.html.twig' %}
+            </div>
+        {% endfor %}
+    </div><!-- /.row -->
 {% endblock %}

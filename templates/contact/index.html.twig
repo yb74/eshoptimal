@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact us - Eshoptimal{% endblock %}
+
+{% block content %}
+    <h2>Contact us</h2>
+    <p>Do not hesitate to contact our team, we will respond as soon as possible.</p>
+    {% for message in app.flashes('notice') %}
+        <div class="alert alert-info">{{ message }}</div>
+    {% endfor %}
+    <div class="row">
+        <div class="col-md-8">{{ form(form) }}</div>
+        <div class="col-md-4">
+            <strong>Eshoptimal</strong>
+            <hr>
+            06 20 30 40 50<br/>
+            8 rue des lylas fleuris, 75000 Paris.<br/>
+            contact@eshoptimal.fr<br/>
+        </div>
+    </div>
+
+{% endblock %}
