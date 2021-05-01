@@ -1,6 +1,10 @@
 body {
-    min-height: 100vh;
+    /*min-height: 100vh;*/
     padding-bottom: 0 !important;
+}
+
+main {
+    min-height: 100vh;
 }
 
 .navbar-item-custom a {
@@ -10,10 +14,6 @@ body {
 .block-small {
     max-width: 600px;
     margin: 0 auto;
-}
-
-.footer-custom {
-
 }
 
 .product-item {
@@ -91,4 +91,8 @@ body {
 .account-item a:hover {
     color: #778ca3;
     text-decoration: none;
+}
+
+.footer-custom {
+
 }

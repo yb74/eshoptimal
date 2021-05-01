@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Our products{% endblock %}
+{% block title %}Our products - Eshoptimal{% endblock %}
 
 {% block content %}
     <div class="row">
@@ -9,14 +9,14 @@
             {{ form(form) }}
         </div>
         <div class="col-md-9">
-            <h3>Our Products</h3>
+            <h3>Our products</h3>
 
             <div class="row product-container">
-                <div class="col-md-4">
-                    {% for product in products %}
+                {% for product in products %}
+                    <div class="col-md-4">
                         {% include 'product/single_product.html.twig' %}
-                    {% endfor %}
-                </div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
